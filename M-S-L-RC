@@ -1,0 +1,9 @@
+#!/bin/bash
+for host in $( $1 )
+  do 
+     sshpass $3 $2@$host
+     echo "this command will runn on all the servers which are mention on $1 file "
+  done
+  
+ exit
+ 
