@@ -1,14 +1,12 @@
 #!/bin/bash
 export http_proxy=""
 export https_proxy=""
-admin="superadmin"
-adminpass="Pass@1234"
-# precisionuser="precision"
-# precisionpass="Precision@123"
-# precisionnewpass="Precision@1234"
+admin="username"
+adminpass="password"
+
 host="neuro.default.philips.com"
-user="nolisuser"
-pass="Nolis@1234"
+user="appusername"
+pass="apppassword"
 client_id=nolisapp
 
 ########################################
@@ -17,9 +15,9 @@ client_id=nolisapp
 
 curl -X POST https://"${host}"/iam/api/v2.0/Credential/Reset -H 'content-type: application/json' \
 -d '{
-  "username": "superadmin",
-  "password": "Pass@123",
-  "newpassword": "Pass@1234",
+  "username": "username",
+  "password": "Pass",
+  "newpassword": "Pass4",
   "securityQuestionWithAnswer": [
     {
       "questionText": "What is the color of your first car?",
